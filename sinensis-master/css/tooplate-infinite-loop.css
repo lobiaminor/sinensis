@@ -6,10 +6,23 @@ https://www.tooplate.com/view/2117-infinite-loop
 
 */
 
+/* Sezioni */
+
+.right-aligned-row {
+  text-align: right;
+}
+
+.container {
+  
+}
+
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1.2em;
   color: #707070;
   margin: 0;
@@ -36,7 +49,7 @@ a:focus {
 }
 
 .btn:hover {
-  background-color: #ced4da;
+  background-color: rgba(128,128,128,0.5);
 }
 
 blockquote {
@@ -45,8 +58,11 @@ blockquote {
 }
 
 .tm-section-pad-top {
+  background-color: white;
   padding-top: 80px;
   padding-bottom: 40px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .tm-content-box {
@@ -71,7 +87,7 @@ blockquote {
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
   color: white;
-  background-color: #38B;
+  background-color: rgba(128,128,128,0.5);;
 }
 
 /* Navbar */
@@ -89,6 +105,11 @@ blockquote {
   border-bottom: 1px solid #e9ecef;
 }
 
+.navbar-logo {
+  max-width:40%;
+  height:auto;
+}
+
 .navbar-brand {
   color: white;
   font-size: 1.4rem;
@@ -97,11 +118,13 @@ blockquote {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #38B;
+  background-color: rgba(128,128,128,0.5);
+  color: white;
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: #369;
+  background-color: rgba(128,128,128,0.5);
+  color: white;
 }
 
 .nav-item {
@@ -145,8 +168,8 @@ blockquote {
 /* Hero */
 
 #infinite {
-	background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
+	/*background-color: #222;*/
+  background-image: url(../img/CATEGORIE.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -194,8 +217,8 @@ blockquote {
 .tm-hero-text-container-inner {
   margin-top: -90px;
   border-style: 1px black solid;
-  background-color: #808080;
-  opacity: 50%;
+  background-color: rgba(128,128,128,0.5);
+
 
 }
 
@@ -234,7 +257,7 @@ blockquote {
 .tm-down-arrow {
   	color: #FFF;
     cursor: pointer;
-    background: #357;
+    background: none;
     padding: 15px 40px;
     transition: all 0.3s ease;
 }
@@ -255,6 +278,7 @@ blockquote {
 .tm-section-title {
   font-size: 2.6rem;
   font-weight: normal;
+  color: white;
 }
 
 .tm-intro-text {
@@ -270,19 +294,19 @@ blockquote {
 	padding: 20px 0 30px 0;
 }
 
-/* Testimonials */
-#testimonials {
-  color: white;
-  background-image: url(../img/infinite-loop-02.jpg);
-  background-size: cover;
+/* Zone vuote in parallasse */
+.parallax-gap {
+  
+  background-image: url(../img/CATEGORIE.jpg);
+  background-size: auto;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
   position: relative;
 }
 
 @media (max-width: 991px) {
-  #testimonials {
-    background-image: url(../img/infinite-loop-02-mobile.jpg);
+  .parallax-gap {
+    background-image: url(../img/CATEGORIE.jpg);   /* infinite-loop-02-mobile.jpg);*/
   }
 }
 
@@ -301,28 +325,6 @@ blockquote {
   right: 0;
   bottom: 0;
   z-index: 0;
-}
-
-.tm-testimonials-carousel {
-  max-width: 1050px;
-  margin: 0 auto;
-}
-
-.tm-testimonial-item {
-  max-width: 290px;
-  margin-left: 35px;
-  margin-right: 35px;
-}
-
-.tm-testimonial-item img {
-  border-radius: 50%;
-  margin-bottom: 35px;
-}
-
-.tm-testimonial-item figcaption {
-  text-align: right;
-  font-style: italic;
-  font-size: 1.1rem;
 }
 
 /* Work */
@@ -357,93 +359,10 @@ blockquote {
   color: #3ba0dd;
 }
 
-.tm-testimonials-carousel .slick-dots li button:before {
-  color: white;
-  opacity: 0.5;
-}
-
-.tm-testimonials-carousel .slick-dots li button:hover:before,
-.tm-testimonials-carousel .slick-dots li button:focus:before,
-.tm-testimonials-carousel .slick-dots li.slick-active button:before {
-  color: white;
-  opacity: 1;
-}
-
 .slick-dots li button:before {
   font-size: 18px;
 }
 
-/* Hover Effect */
-/* Common style */
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  background: #3085a3;
-  text-align: center;
-  cursor: pointer;
-}
-
-.grid figure img {
-  position: relative;
-  display: block;
-  min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
-}
-
-.grid figure figcaption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-
-.grid figure h2 {
-  word-spacing: -0.15em;
-  font-size: 0.9em;
-  font-weight: 300;
-}
-
-.grid figure h2 span {
-  font-weight: 600;
-}
-
-.grid figure h2,
-.grid figure p {
-  margin: 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
-}
 
 /*---------------*/
 /***** Honey *****/
@@ -510,16 +429,12 @@ figure.effect-honey:hover h2 i {
   transform: translate3d(0, 0, 0);
 }
 
-.tm-container-gallery {
-	padding-top: 30px;
-	}
 
 /* Contact */
 
 #contact {
   color: white;
   background-color: #001828;
-  background-image: url(../img/infinite-loop-03.jpg);
   background-position: center;
   background-repeat: no-repeat;
   min-height: 980px;
@@ -623,10 +538,6 @@ p {
     padding-left: 0px;
   }
 
-  .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -672,8 +583,7 @@ p {
   }
 
   .navbar-collapse {
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
+    background-color: rgb(255, 255, 255);  
     border-radius: 3px;
   }
 
